@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="item_field"> <button id="add_btn">Add</button> <button id="color_btn">Make Blue</button>
+    </div>
+    <div class="list_div">
+        <ul id="items_list"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add_btn").click(function () {
+                let item = $("#item_field").val();
+                $("#items_list").append("<li>" + item + "</li>");
+                $("#item_field").val("");
+            });
+
+            $("#color_btn").click(function () {
+                $(".list_div").css("color", "blue");
+            });
+        });
+    </script>
+
+</body>
+</html>

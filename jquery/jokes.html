@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="joke_btn">Get Joke</button>
+    <div id="joke" style="font-size: 1.3em"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#joke_btn").click(function () {
+                $.ajax("https://api.chucknorris.io/jokes/random",
+                    {
+                        success: function(data) {
+                            $("#joke").text(data.value);
+                        },
+                        error: function() {
+                            $("#joke").text("Error: Can't load joke. Chuck Norris is MAD about this");
+                        }
+                    });
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

@@ -5,3 +5,5 @@ Upload images and view as gallery
 Paginate a large number of blog posts
 ## Poll
 Example of radiobutton and checkboxes processing
+## jquery
+Simple jQuery examples
